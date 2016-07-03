@@ -1,0 +1,58 @@
+@CHARSET "ISO-8859-1";
+
+#frmLogin_centralizado_login {
+	display: block;
+	margin: auto;
+	width: 25%;
+}
+
+#imagem_logo_centralizada_template {
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	width: 16%;
+}
+
+#rodape_template {
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	width: 25%;
+	text-align: center;
+}
+
+
+body {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	font-weight: normal
+}
+
+header {
+	padding: 5px;
+	margin-bottom: 20px;
+	height: 65px;
+	background-color: #545454;
+	color: #fff;
+	box-shadow: 0px 2px 2px #ccc
+}
+
+#conteudo {
+	padding: 0px 8px
+}
+
+footer {
+	border-top: 1px solid #ccc;
+	padding: 5px 8px;
+	margin-top: 20px;
+	margin-bottom: 10px
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: 500;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 10px
+}

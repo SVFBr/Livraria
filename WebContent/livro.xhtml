@@ -42,7 +42,7 @@
 						<p:inputText id="preco" value="#{livroBean.livro.preco}" />
 
 						<p:outputLabel value="Data de Lançamento:" for="dataLancamento" />
-						<p:calendar id="dataLancamento" value="#{livroBean.livro.dataLancamento.time}" timeZone="America/Sao_Paulo" pattern="dd/MM/yyyy" mask="true" />
+						<p:calendar id="dataLancamento" value="#{livroBean.livro.dataLancamento.time}" timeZone="America/Sao_Paulo" pattern="dd/MM/yyyy" mask="true" locale="pt_BR"/>
 						
 					</p:panelGrid>
 
@@ -83,12 +83,13 @@
 			<br />
 	
 			<h:form id="formTabelaLivros">
-			<p:dataTable value="#{livroBean.livros}" var="livro" id="tabelaLivros" paginator="true" rows="5">
-				<f:facet name="header">Livros</f:facet>
-				<p:column headerText="Título" sortBy="#{livro.titulo}" filterBy="#{livro.titulo}" filterMatchMode="startsWith">
+			<p:dataTable value="#{livroBean.livros}" var="livro" id="tabelaLivros" paginator="true" rows="10">
+				<f:facet name="header">Livros Cadastrados</f:facet>
+<!-- 				filterMatchMode="contains" startsWith >  -->
+				<p:column headerText="Título" sortBy="#{livro.titulo}" filterBy="#{livro.titulo}" filterMatchMode="contains"> 
 					<h:outputText value="#{livro.titulo}" />
 				</p:column>
-				<p:column headerText="ISBN" sortBy="#{livro.isbn}" >
+				<p:column headerText="ISBN" sortBy="#{livro.isbn}" filterBy="#{livro.isbn}" filterMatchMode="startsWith" >
 					<h:outputText value="#{livro.isbn}" />
 				</p:column>
 				<p:column headerText="Preço"  sortBy="#{livro.preco}">
